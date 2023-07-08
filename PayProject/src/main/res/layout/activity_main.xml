@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#FEF9E7">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Format Cafe"
+        android:fontFamily="@font/dugi"
+        android:textStyle="bold"
+        android:textSize="45sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"/>
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/ic_logo"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/dugi"
+        android:text="주문을 하려면 화면을 터치하세요"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+</RelativeLayout>

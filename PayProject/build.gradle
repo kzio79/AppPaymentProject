@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.project'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.project"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    viewBinding{
+        enabled = true
+    }
+    dataBinding{
+        enabled = true
+    }
+    buildFeatures{
+        aidl = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation ('androidx.preference:preference-ktx:1.2.0'){
+        exclude group: 'androidx.lifecycle', module:'lifecycle-viewmodel'
+        exclude group: 'androidx.lifecycle', module:'lifecycle-viewmodel-ktx'
+    }
+
+    implementation 'com.github.tosspayments:payment-sdk-android:0.1.2' //결제서비스
+
+    //google-firebase
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
+
+    //kakao
+    implementation "com.kakao.sdk:v2-all:2.13.0" // 전체 모듈 설치, 2.11.0 버전부터 지원
+    implementation "com.kakao.sdk:v2-user:2.13.0" // 카카오 로그인
+    implementation "com.kakao.sdk:v2-talk:2.13.0" // 친구, 메시지(카카오톡)
+
+    //naver
+    implementation 'com.navercorp.nid:oauth-jdk8:5.5.0' // jdk 8
+
+    //디스플레이 설정
+    implementation 'com.ssomai:android.scalablelayout:2.1.6'
+
+//    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.10'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+//    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
+//    implementation 'androidx.browser:browser:1.5.0'
+//    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+//    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+//    implementation 'androidx.fragment:fragment-ktx:1.5.7'
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+//    implementation 'com.squareup.moshi:moshi-kotlin:1.11.0'
+//    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+//    implementation 'com.airbnb.android:lottie:3.1.0'
+}

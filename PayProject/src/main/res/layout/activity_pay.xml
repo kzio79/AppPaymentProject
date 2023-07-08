@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="620dp">
+
+        <com.tosspayments.paymentsdk.view.PaymentMethodWidget
+            android:id="@+id/payment_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnpay"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="결제하기"
+        android:textSize="20dp"
+        android:fontFamily="@font/dugi"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/btn_color"/>
+
+</LinearLayout>

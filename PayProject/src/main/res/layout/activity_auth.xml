@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            app:scale_base_width="800"
+            app:scale_base_height="100">
+        <TextView
+            android:id="@+id/authText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="본인 인증 후 결제 창으로"
+            android:textColor="@color/black"
+            android:fontFamily="@font/dugi"
+            android:textAlignment="center"
+            app:scale_width="800"
+            app:scale_height="100"
+            app:scale_textsize="70"/>
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+        <ImageView
+            android:id="@+id/googleAuth"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:src="@drawable/auth_google"
+            android:layout_marginTop="320dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/kakaoAuth"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:src="@drawable/auth_kakao"
+            android:layout_below="@+id/googleAuth"
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/naverAuth"
+            android:layout_width="250dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/kakaoAuth"
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/auth_naver"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>
